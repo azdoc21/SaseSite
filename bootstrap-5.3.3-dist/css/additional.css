@@ -1,0 +1,230 @@
+body {
+    font-family: "Freeman", sans-serif;
+}
+
+.freeman-regular {
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*================ Carousel =============================*/
+#myCarousel {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+}
+
+.carousel-inner{
+    max-height: 38rem !important;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 60%;
+    text-transform: uppercase;
+}
+
+.bg-custom {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px;
+    vertical-align: auto !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    border-radius: 5px;
+}
+
+/*========================= Nav Bar ==============================*/
+.dropdown-item:hover {
+    background-color: #0668B3 !important;
+    color: aliceblue !important;
+}
+
+.sase-blue-text {
+    color:  #0668B3 !important;
+}
+
+.sase-green-text {
+    color:  #7DC242 !important;
+}
+
+.sase-blue {
+    background-color:  #0668B3 !important;
+    color: white;
+}
+
+.sase-green {
+    background-color:  #7DC242 !important;
+    color: white;
+}
+
+/*========================= Fixed Background ==============================*/
+.fixed-background {
+    position: relative;
+    width: 100%;
+    z-index: 1000 !important;
+}
+
+.fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -999 !important;
+}
+
+.fixed {
+    z-index: -999 !important;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.fixed-background {
+    padding: 4rem 0;
+}
+
+.fixed {
+    background-image: url('/images/bluegreentech.png');
+    position: fixed;
+}
+
+.major {
+    letter-spacing: 40px;
+    font-size: 100px;
+    text-shadow: black 3px 3px 5px;
+}
+
+.minor {
+    font-size: 30px;
+    text-shadow: black 3px 3px 5px;
+}
+
+/*======================= 3 columns ========================*/
+.shadow-box {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .1);
+    position: relative;
+    z-index: 1000 !important;
+}
+
+.back {
+    z-index: 0;
+}
+
+.media-logo {
+    max-width: 60px !important;
+}
+
+.icon {
+    margin: 2rem 0;
+    scale: 200%;
+    width: 100%;
+}
+
+/*=====================Announcements=====================*/
+
+.blu-gre-grad {
+    background-image: linear-gradient(to right, #0668B3, #7DC242);
+}
+
+.break {
+    padding: .5rem 0;
+    margin: 1rem 1rem;
+    background-image: linear-gradient(to right, #0668B3, #7DC242);
+}
+
+.announcement-pic {
+    max-height: 250px;
+}
+
+/*=================== Upcoming Events ===================*/
+.demo-wrap {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .demo-bg {
+    background-image: url('/images/calender.png');
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  .demo-content {
+    position: relative;
+  }
+
+  .fixed-calender {
+    z-index: -999 !important;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    background-image: url('/images/calender.png');
+    position: fixed;
+}
+
+.plat-text {
+
+        background-image: url("../../images/plat-background.png");
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-weight: 800;
+        -webkit-font-smoothing: antialiased;
+
+}
+
+.gold-text {
+    background-image: url('../../images/gold-background.png');
+    background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-weight: 800;
+        -webkit-font-smoothing: antialiased;
+}
+
+.silv-text {
+    background-image: url('../../images/silv-background.png');
+    background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-weight: 800;
+        -webkit-font-smoothing: antialiased;
+}
+
+.new-text {
+    background-image: url('../../images/new-background.png');
+    background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 7rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-weight: 800;
+        -webkit-font-smoothing: antialiased;
+}
