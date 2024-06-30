@@ -3,7 +3,7 @@ body {
 }
 
 .freeman-regular {
-    font-family: "Freeman", sans-serif;
+    font-family: "Freeman", sans-serif !important;
     font-weight: 400;
     font-style: normal;
 }
@@ -208,7 +208,7 @@ body {
 .silv-text {
     background-image: url('../../images/silv-background.png');
     background-repeat: repeat;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 7rem;
         font-weight: bold;
@@ -227,4 +227,9 @@ body {
         text-transform: uppercase;
         font-weight: 800;
         -webkit-font-smoothing: antialiased;
+}
+
+.sponsor-background {
+    background-image: url('../../images/cube-net-background.png');
+    background-size: cover;
 }
