@@ -128,6 +128,11 @@ body {
     width: 100%;
 }
 
+.small-icon {
+    scale: 80%;
+    width: 3%;
+}
+
 /*=====================Announcements=====================*/
 
 .blu-gre-grad {
@@ -233,3 +238,9 @@ body {
     background-image: url('../../images/cube-net-background.png');
     background-size: cover;
 }
+
+.event-descript {
+    margin-left: 15px;
+    margin-top: -10px;
+}
+/*Calender stuff*/
