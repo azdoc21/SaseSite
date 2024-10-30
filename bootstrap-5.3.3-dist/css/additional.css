@@ -188,7 +188,7 @@ body {
 
         background-image: url("../../images/plat-background.png");
         background-repeat: repeat;
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 7rem;
         font-weight: bold;
@@ -201,17 +201,29 @@ body {
 .gold-text {
     background-image: url('../../images/gold-background.png');
     background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 7rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-weight: 800;
-        -webkit-font-smoothing: antialiased;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
 }
 
 .silv-text {
     background-image: url('../../images/silv-background.png');
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: 800;
+    -webkit-font-smoothing: antialiased;
+}
+
+.new-text {
+    background-image: url('../../images/new-background.png');
     background-repeat: repeat;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -222,20 +234,8 @@ body {
         -webkit-font-smoothing: antialiased;
 }
 
-.new-text {
-    background-image: url('../../images/new-background.png');
-    background-repeat: repeat;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 7rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        font-weight: 800;
-        -webkit-font-smoothing: antialiased;
-}
-
 .sponsor-background {
-    background-image: url('../../images/cube-net-background.png');
+    background-image: url('../../images/bluegreentech2.jpg');
     background-size: cover;
 }
 
