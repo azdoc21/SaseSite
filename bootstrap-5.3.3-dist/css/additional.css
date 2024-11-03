@@ -92,7 +92,7 @@ body {
 }
 
 .fixed {
-    background-image: url('/images/Backgrounds/bluegreentech.png');
+    background-image: url('../../images/Backgrounds/bluegreentech.png');
     position: fixed;
 }
 
@@ -156,7 +156,7 @@ body {
   }
   
   .demo-bg {
-    background-image: url('/images/Backgrounds/calender.png');
+    background-image: url('../../images/Backgrounds/calender.png');
     position: absolute;
     left: 0;
     top: 0;
@@ -180,7 +180,7 @@ body {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     will-change: transform;
-    background-image: url('/images/Backgrounds/calender.png');
+    background-image: url('../../images/Backgrounds/calender.png');
     position: fixed;
 }
 
