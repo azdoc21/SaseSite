@@ -7,7 +7,7 @@ class GalleryManager {
     async initialize() {
         try {
             // Fetch gallery data from CSV file
-            const response = await fetch('../../CSV_info/GalleryEvents.csv');
+            const response = await fetch('CSV_info/GalleryEvents.csv');
             const csvText = await response.text();
             this.galleryData = this.parseCSV(csvText);
             
