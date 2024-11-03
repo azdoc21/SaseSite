@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Process announcements
     async function updateAnnouncements() {
         try {
-            const announcements = await fetchCSV('../../CSV_info/Announcements.csv');
+            const announcements = await fetchCSV('../CSV_info/Announcements.csv');
             const announcementsContainer = document.querySelector('#announcements-container');
             
             // Create a row div to contain the announcements
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Process events
     async function updateEvents() {
         try {
-            const events = await fetchCSV('../../CSV_info/UpcomingEvents.csv');
+            const events = await fetchCSV('../CSV_info/UpcomingEvents.csv');
             const eventsContainer = document.querySelector('#events-container');
             
             // Filter and sort future events
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     async function updateCarousel() {
         try {
-            const carousel = await fetchCSV('../../CSV_info/Carousel.csv');
+            const carousel = await fetchCSV('../CSV_info/Carousel.csv');
             console.log(carousel);
             const carouselInner = document.querySelector('.carousel-inner');
             carouselInner.innerHTML = '';
