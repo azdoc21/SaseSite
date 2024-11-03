@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearSuffix = `${String(currentYear).slice(-2)}-${String(currentYear + 1).slice(-2)}`;
 
     // Fetch the CSV data
-    fetch('../../CSV_info/CurrentBoard.csv')
+    fetch('../CSV_info/CurrentBoard.csv')
         .then(response => response.text())
         .then(csvText => {
             console.log('CSV loaded:', csvText); // Add debugging
