@@ -88,6 +88,7 @@ function generateEboardCard(position, name, major, email, year, linkedin, cardId
     
     // Debug the image path construction
     const [firstName, lastName] = name.split(' ');
+    const imagePath = `../images/Eboard/Eboard${yearSuffix}/${firstName}_${lastName}.png`;
     console.log('Generated image path:', imagePath);
     
     return `
