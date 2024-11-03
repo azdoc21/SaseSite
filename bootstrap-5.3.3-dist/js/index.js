@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Process events
     async function updateEvents() {
         try {
-            const events = await fetchCSV('../CSV_info/UpcomingEvents.csv');
+            const events = await fetchCSV('CSV_info/UpcomingEvents.csv');
             const eventsContainer = document.querySelector('#events-container');
             
             // Filter and sort future events
