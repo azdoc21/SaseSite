@@ -33,7 +33,7 @@ def update_calendar_content():
     footer_content = content[footer_idx:]
 
     # Read events from CSV into pandas dataframe
-    events_df = pd.read_csv("CSV_info/UpcomingEvents.csv")
+    events_df = pd.read_csv("../CSV_info/UpcomingEvents.csv")
     # Convert the Date column to datetime and then format it as string
     events_df['Date'] = pd.to_datetime(events_df['Date'], format='%d-%b-%Y')
     # Filter for future events only
@@ -160,7 +160,7 @@ def update_meetTeam_content():
     footer_content = content[footer_idx:]
 
     # Read the Eboard CSV into a pandas dataframe
-    eboard_df = pd.read_csv("CSV_info/CurrentBoard.csv")
+    eboard_df = pd.read_csv("../CSV_info/CurrentBoard.csv")
     # Initialize empty string to store all card HTML
     eboard_cards = ""
     
@@ -273,7 +273,7 @@ def update_index_content():
 
     # Get list of carousel images
     carousel_images = []
-    carousel_dir = "images/Carousel"
+    carousel_dir = "../images/Carousel"
     if os.path.exists(carousel_dir):
         carousel_images = [f for f in os.listdir(carousel_dir) if f.endswith(('.png', '.jpg', '.jpeg'))]
     else:
@@ -283,7 +283,7 @@ def update_index_content():
     carousel_html = "<!--Carousel -->\n" + generate_carousel(carousel_images)
 
     # Process announcements data
-    announcements_df = pd.read_csv("CSV_info/Announcements.csv")
+    announcements_df = pd.read_csv("../CSV_info/Announcements.csv")
     announcements_df['Date'] = pd.to_datetime(announcements_df['Date'], format='%d-%b-%Y')
     current_date = pd.Timestamp.now().normalize()
     announcements_df = announcements_df[announcements_df['Date'] <= current_date]
@@ -298,7 +298,7 @@ def update_index_content():
 
     # Process upcoming events data
     try:
-        events_df = pd.read_csv("CSV_info/UpcomingEvents.csv")
+        events_df = pd.read_csv("../CSV_info/UpcomingEvents.csv")
         events_df = events_df[['Name', 'Date', 'Description']]
     except FileNotFoundError:
         print("Could not find CSV_info/UpcomingEvents.csv")
@@ -438,7 +438,7 @@ def update_gallery_content():
 
     # Read events from CSV into pandas dataframe
     # Read events from CSV and convert dates to datetime
-    gallery_events_df = pd.read_csv("CSV_info/GalleryEvents.csv")
+    gallery_events_df = pd.read_csv("../CSV_info/GalleryEvents.csv")
     gallery_events_df['Date'] = pd.to_datetime(gallery_events_df['Date'])
     
     # Sort events by date descending (most recent first)
@@ -481,7 +481,7 @@ def update_gallery_content():
                 gallery_rows += generate_gallery_row(spring_events, start_idx)
 
     # Write the updated content to the gallery.html file
-    with open('pages_py/gallery_copy.html', 'w') as file:
+    with open('pages_py/gallery.html', 'w') as file:
         file.write(header_content)
         file.write(gallery_rows)
         file.write(footer_content)

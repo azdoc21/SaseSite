@@ -125,20 +125,26 @@ class GalleryManager {
         this.galleryContainer.appendChild(rowDiv);
     }
 
-    getEventImages(eventName) {
-        // Simplified image handling - just return the logo for now
-        // You can enhance this later with proper image paths
-        return ['../images/sase_logo.png'];
+    getEventImages(event) {
+        const eventImages = [];
+        if (event['Num of Pics'] > 0) {
+        for (let i = 1; i <= event['Num of Pics']; i++) {
+            eventImages.push(`../images/Gallery/${event.Name}${i}.png`);
+            }
+        } else {
+            eventImages.push('../images/sase_logo.png');
+        }
+        return eventImages;
     }
 
     async createEventCard(event, eventNum) {
         const cardDiv = document.createElement('div');
         cardDiv.className = 'col-sm-4 themed-grid-col';
         
-        const images = this.getEventImages(event.Name);
+        const images = this.getEventImages(event);
         const formattedDate = event.Date.toLocaleDateString('en-US', {
             year: 'numeric',
-            month: 'long',
+            month: 'long', 
             day: 'numeric'
         });
 
@@ -152,6 +158,7 @@ class GalleryManager {
                             </div>
                         `).join('')}
                     </div>
+                    ${images.length > 1 ? `
                     <button class="carousel-control-prev" type="button" data-bs-target="#event${eventNum}Carousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
@@ -160,6 +167,7 @@ class GalleryManager {
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
+                    ` : ''}
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">${event.Name}</h5>

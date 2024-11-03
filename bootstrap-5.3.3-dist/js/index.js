@@ -175,6 +175,45 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 
+    async function updateCarousel() {
+        try {
+            const carousel = await fetchCSV('/CSV_info/Carousel.csv');
+            console.log(carousel);
+            const carouselInner = document.querySelector('.carousel-inner');
+            carouselInner.innerHTML = '';
+
+            // Add first item as active
+            if (carousel.length > 0) {
+                const firstItem = carousel[0];
+                carouselInner.innerHTML += `
+                <div class="carousel-item active">
+                    <img src="images/Carousel/${firstItem['Image']}" class="d-block w-100" alt="${firstItem['Image Title']}">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="container-fluid bg-custom">
+                            <h5>${firstItem['Title']}</h5>
+                        </div>
+                    </div>
+                </div>`;
+
+                // Add remaining items
+                for (let i = 1; i < carousel.length; i++) {
+                    const item = carousel[i];
+                    carouselInner.innerHTML += `
+                    <div class="carousel-item">
+                        <img src="images/Carousel/${item['Image']}" class="d-block w-100" alt="${item['Image Title']}">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="container-fluid bg-custom">
+                                <h5>${item['Title']}</h5>
+                            </div>
+                        </div>
+                    </div>`;
+                }
+            }
+        } catch (error) {
+            console.error('Error updating carousel:', error);
+        }
+    }
+
     function generateAnnouncementCard(name, date, description, image, linkButton, link) {
         return `
             <div class="col-md-6">
@@ -207,6 +246,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Initialize everything
     await Promise.all([
         updateAnnouncements(),
-        updateEvents()
+        updateEvents(),
+        updateCarousel()
     ]);
 });
