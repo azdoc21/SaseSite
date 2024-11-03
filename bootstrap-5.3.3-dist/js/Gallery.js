@@ -129,10 +129,10 @@ class GalleryManager {
         const eventImages = [];
         if (event['Num of Pics'] > 0) {
             for (let i = 1; i <= event['Num of Pics']; i++) {
-                eventImages.push(`../../images/Gallery/${event.Name}${i}.png`);
+                eventImages.push(`../images/Gallery/${event.Name}${i}.png`);
             }
         } else {
-            eventImages.push('../../images/sase_logo.png');
+            eventImages.push('../images/sase_logo.png');
         }
         return eventImages;
     }
