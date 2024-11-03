@@ -7,7 +7,7 @@ class GalleryManager {
     async initialize() {
         try {
             // Fetch gallery data from CSV file
-            const response = await fetch('/CSV_info/GalleryEvents.csv');
+            const response = await fetch('../../CSV_info/GalleryEvents.csv');
             const csvText = await response.text();
             this.galleryData = this.parseCSV(csvText);
             
@@ -128,11 +128,11 @@ class GalleryManager {
     getEventImages(event) {
         const eventImages = [];
         if (event['Num of Pics'] > 0) {
-        for (let i = 1; i <= event['Num of Pics']; i++) {
-            eventImages.push(`../images/Gallery/${event.Name}${i}.png`);
+            for (let i = 1; i <= event['Num of Pics']; i++) {
+                eventImages.push(`../../images/Gallery/${event.Name}${i}.png`);
             }
         } else {
-            eventImages.push('../images/sase_logo.png');
+            eventImages.push('../../images/sase_logo.png');
         }
         return eventImages;
     }

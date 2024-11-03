@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const yearSuffix = `${String(currentYear).slice(-2)}-${String(currentYear + 1).slice(-2)}`;
 
     // Fetch the CSV data
-    fetch('../../images/EBoard/CurrentBoard.csv')
+    fetch('../../CSV_info/CurrentBoard.csv')
         .then(response => response.text())
         .then(csvText => {
             console.log('CSV loaded:', csvText); // Add debugging
@@ -88,7 +88,7 @@ function generateEboardCard(position, name, major, email, year, linkedin, cardId
     
     // Debug the image path construction
     const [firstName, lastName] = name.split(' ');
-    const imagePath = `../images/Eboard/Eboard${yearSuffix}/${firstName}_${lastName}.png`;
+    const imagePath = `../../images/Eboard/Eboard${yearSuffix}/${firstName}_${lastName}.png`;
     console.log('Generated image path:', imagePath);
     
     return `
