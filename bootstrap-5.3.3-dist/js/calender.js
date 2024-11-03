@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function() {
     // Fetch and parse the CSV file
-    const response = await fetch('CSV_info/UpcomingEvents.csv');
+    const response = await fetch('/CSV_info/UpcomingEvents.csv');
     const csvText = await response.text();
     console.log('Raw CSV text:', csvText);
     const events = parseCSV(csvText);
