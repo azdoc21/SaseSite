@@ -94,6 +94,7 @@ body {
 .fixed {
     background-image: url('../../images/Backgrounds/bluegreentech.png');
     position: fixed;
+    z-index: -1000 !important; /* Changed to make it the backward most element */
 }
 
 .major {
