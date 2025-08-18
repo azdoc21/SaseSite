@@ -68,7 +68,7 @@ class GalleryManager {
             event.Date.getFullYear()))];
         
         years.forEach(year => {
-            // Handle Autumn semester (Aug-Dec)
+            // Handle Autumn semester (Aug-Dec)im
             const autumnEvents = this.galleryData.filter(event => 
                 event.Date.getFullYear() === year && 
                 event.Date.getMonth() >= 7 && 
@@ -129,7 +129,7 @@ class GalleryManager {
         const eventImages = [];
         if (event['Num of Pics'] > 0) {
             for (let i = 1; i <= event['Num of Pics']; i++) {
-                eventImages.push(`../images/Gallery/${event.Name}$_{i}.png`);
+                eventImages.push(`../images/Gallery/${event.Name}_${i}.png`);
             }
         } else {
             eventImages.push('../images/sase_logo.png');
