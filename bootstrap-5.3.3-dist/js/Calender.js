@@ -326,6 +326,6 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("Countdown").innerHTML = "Time for Scoops N' Science!";
+    document.getElementById("Countdown").innerHTML = "Career Fiar Prep with P&G!";
   }
 }, 1000);
